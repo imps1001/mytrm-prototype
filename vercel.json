@@ -1,0 +1,11 @@
+{
+  "buildCommand": "node scripts/build-env.js",
+  "outputDirectory": "public",
+  "headers": [
+    { "source": "/js/env.js", "headers": [{ "key": "Cache-Control", "value": "no-store" }] }
+  ],
+  "rewrites": [
+    { "source": "/health", "destination": "/health.json" },
+    { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
+  ]
+}
